@@ -1,0 +1,87 @@
+<html>
+
+  <head>
+
+    <style>
+
+      body {
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      aside {
+        background: rgba(255,255,255,0.75);
+        font: 100 1em/2 'Gill Sans';
+        position: absolute;
+        padding: 2.5%;
+        left: 62.5%;
+        width: 25%;
+        top: 0;
+      }
+
+    </style>
+
+    <script src='https://code.jquery.com/jquery-2.1.0.min.js'></script>
+
+    <script>
+
+      $(window).scroll(function(){
+
+        var offset = $(document).height() - $('aside').outerHeight();
+
+        var offsetPercentage = offset / 100;
+
+        if ( $(window).scrollTop() < ( $(document).height() - window.innerHeight ) ) {
+
+          var scrollPercentage = $(window).scrollTop() / ( ( $(document).height() - window.innerHeight ) / 100 );
+
+          var transform = offsetPercentage * scrollPercentage;
+
+          $('aside').css({ '-webkit-transform' : 'translate3d(0,' + transform + 'px,0)' });
+
+        } else {
+
+          $('aside').css({ '-webkit-transform' : 'translate3d(0,' + offset + 'px,0)' });
+
+        }
+
+      });
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <img src="http://imgsrc.hubblesite.org/hu/db/images/hs-2009-05-a-large_web.jpg">
+
+    <img src="http://imgsrc.hubblesite.org/hu/db/images/hs-1998-39-a-full_jpg.jpg">
+
+    <img src="http://imgsrc.hubblesite.org/hu/db/images/hs-1999-01-a-full_jpg.jpg">
+
+    <img src="http://imgsrc.hubblesite.org/hu/db/images/hs-2004-32-d-large_web.jpg">
+
+    <aside>
+
+      <h1>Helix Nebula</h1>
+
+      <p>The Helix Nebula, also known as The Helix, NGC 7293, is a large planetary nebula (PN) located in the constellation Aquarius. Discovered by Karl Ludwig Harding, probably before 1824, this object is one of the closest to the Earth of all the bright planetary nebulae.[7] The estimated distance is about 215 parsecs or 700 light-years. It is similar in appearance to the Cat's Eye Nebula and the Ring Nebula, whose size, age, and physical characteristics are similar to the Dumbbell Nebula, varying only in its relative proximity and the appearance from the equatorial viewing angle.[3] The Helix Nebula has sometimes been referred to as the "Eye of God" in pop culture.</p>
+
+      <p>The Helix Nebula is an example of a planetary nebula, or 'planetary' formed at the end of a star's evolution. Gases from the star in the surrounding space appear, from our vantage point, as if we are looking down a helix structure. The remnant central stellar core, known as a planetary nebula nucleus or PNN, is destined to become a white dwarf star. The observed glow of the central star is so energetic that it causes the previously expelled gases to brightly fluoresce.</p>
+
+      <p>The Helix Nebula in the constellation of Aquarius lies about 700 light-years away, spanning about 0.8 parsec or 2.5 light-years. Recent images by the Hubble Space Telescope of the Helix Nebula are a composite of newly released images from the ACS instrument and the wide-angle images from the Mosaic Camera on the WIYN 0.9-metre telescope at Kitt Peak National Observatory.</p>
+
+      <p>Currently, the age is estimated to be 10,600+2,300−1,200 years, based solely upon a measured expansion rate of 31 km·s−1.[3]</p>
+
+      <p>The Helix Nebula is thought to be shaped like a prolate spheroid with strong density concentrations toward the filled disk along the equatorial plane, whose major axis is inclined about 21° to 37° from our vantage point. The size of the inner disk is 8×19 arcmin in diameter (0.52 pc); the outer torus is 12×22 arcmin in diameter (0.77 pc); and the outer-most ring is about 25 arcmin in diameter (1.76 pc). We see the outer-most ring as flattened on one side due to its colliding with the ambient interstellar medium.</p>
+
+      <p>Expansion of the whole planetary nebula structure is estimated to have occurred in the last 6,560 years, and 12,100 years for the inner disk[citation needed]. Spectroscopically, the outer ring's expansion rate is 40 km·s−1, and about 32 km·s−1 for the inner disk.</p>
+
+    </aside>
+
+  </body>
+
+</html>
