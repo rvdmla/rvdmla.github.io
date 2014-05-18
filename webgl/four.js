@@ -32,3 +32,5 @@ function render() {
   renderer.render(scene, camera);
 
 } render();
+
+// Need to debounce scroll and add touch scroll update
