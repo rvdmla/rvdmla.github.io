@@ -1,0 +1,107 @@
+<html>
+
+  <head>
+
+    <script src='jquery-2.1.1.min.js'></script>
+
+    <script src='three.min.js'></script>
+
+    <script>
+
+      var sphere;
+
+      $(function() {
+
+        // set the scene size
+        var WIDTH = 400,
+            HEIGHT = 300;
+
+        // set some camera attributes
+        var VIEW_ANGLE = 45,
+            ASPECT = WIDTH / HEIGHT,
+            NEAR = 0.1,
+            FAR = 10000;
+
+        // get the DOM element to attach to
+        // - assume we've got jQuery to hand
+        var $container = $('#container');
+
+        // create a WebGL renderer, camera
+        // and a scene
+        var renderer = new THREE.WebGLRenderer();
+        var camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+
+        var scene = new THREE.Scene();
+
+        // add the camera to the scene
+        scene.add(camera);
+
+        // the camera starts at 0,0,0
+        // so pull it back
+        camera.position.z = 300;
+
+        // start the renderer
+        renderer.setSize(WIDTH, HEIGHT);
+
+        // attach the render-supplied DOM element
+        $container.append(renderer.domElement);
+
+        // set up the sphere vars
+        var height = 180,
+            width = 180,
+            depth = 180;
+
+        // create the sphere's material
+        var sphereMaterial = new THREE.MeshLambertMaterial({ color: 0x336699 });
+
+        // create a new mesh with
+        // sphere geometry - we will cover
+        // the sphereMaterial next!
+        sphere = new THREE.Mesh(new THREE.BoxGeometry(height, width, depth), sphereMaterial);
+
+        sphere.rotation.x = 15;
+        sphere.rotation.y = 90;
+
+        // add the sphere to the scene
+        scene.add(sphere);
+
+        // create a point light
+        var pointLight = new THREE.PointLight(0xddFFee);
+
+        // set its position
+        pointLight.position.x = 70;
+        pointLight.position.y = 20;
+        pointLight.position.z = 200;
+
+        // add to the scene
+        scene.add(pointLight);
+
+        //rAF Shim
+        window.requestAnimFrame = (function(){
+          return  window.requestAnimationFrame       ||
+                  window.webkitRequestAnimationFrame ||
+                  window.mozRequestAnimationFrame    ||
+                  function( callback ){
+                    window.setTimeout(callback, 1000 / 60);
+                  };
+        })();
+
+        // draw using rAF!
+        (function animloop(){
+          requestAnimFrame(animloop);
+          renderer.render(scene, camera);
+        })();
+
+      });
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div id="container"></div>
+
+  </body>
+
+</html>
