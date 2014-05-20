@@ -1,3 +1,5 @@
+var scrollOffset;
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 5, window.innerWidth / (window.innerWidth/3), 0.1, 1000 );
 
@@ -26,7 +28,10 @@ function render() {
 
   requestAnimationFrame(render);
 
-  pointLight.intensity = pointLight.position.y = pointLight.position.x = ( 1 - ( window.scrollY / ( window.innerWidth / 3 ) ) );
+  scrollOffset = window.scrollY / ( window.innerWidth / 3 );
+  pointLight.intensity = pointLight.position.y = pointLight.position.x = ( 1 - scrollOffset );
+  cube.rotation.x = 0.33 - ( scrollOffset / 12 );
+  cube.rotation.y = -0.5 + ( scrollOffset / 12 );
 
   // Render
   renderer.render(scene, camera);
