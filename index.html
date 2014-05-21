@@ -22,12 +22,12 @@
       }
 
       main {
-        font: 100 1em/1.5 'proxima-nova';
+        font: 100 1em/1.5 'futura-pt';
         padding-bottom: 12em;
-        background: #f8f8f8;
+        background: #fff;
         margin-top: 33.33%;
         position: relative;
-        color: #555555;
+        color: #000;
         width: 100%;
         z-index: 1;
       }
@@ -45,6 +45,48 @@
         text-transform: uppercase;
       }
 
+      .introduction {
+        font-size: 24px;
+        font-weight: 100;
+        line-height: 1.5;
+        letter-spacing: 0px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .title {
+        font-family: 'futura-pt';
+        font-weight: 100;
+        letter-spacing: 4px;
+        font-size: 21px;
+        -webkit-font-smoothing: antialiased;
+        line-height: 2;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+
+      .volume {
+        display: block;
+      }
+
+      .subtitle {
+        font-family: 'futura-pt';
+        -webkit-font-smoothing: antialiased;
+        font-size: 21px;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 1.5em;
+      }
+
+      .link {
+        -webkit-font-smoothing: antialiased;
+        font-size: 18px;
+        line-height: 2;
+      }
+
+      li > ol {
+        margin-bottom: 4em;
+      }
+
     </style>
 
   </head>
@@ -59,7 +101,7 @@
           <img src="logo.png" alt="R.V.d.M">
         </h1>
 
-        <h2 class="lead">The following articles are a collection of reflections on 16 years of being a web developer, creating new ideas and techniques in luxury e-commerce and m-commerce, with love for design, UX and performance. The index below is a rough outline of subjects that will be written about, going from local development configurations all the way to performant, responsive, search engine optimized production applications. If you have any questions feel free to contact me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a></h2>
+        <h2 class="lead introduction">The following articles are a collection of reflections on 16 years of being a web developer, creating new ideas and techniques in luxury e-commerce and m-commerce, with love for design, UX and performance. The index below is a rough outline of subjects that will be written about, going from local development configurations all the way to performant, responsive, search engine optimized production applications. If you have any questions feel free to contact me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a></h2>
 
       </header>
 
@@ -69,21 +111,21 @@
 
           <li>
 
-            <h3 class="lead">Volume Three : Using WebGL and Three.js together with Angular.js Directives and Socket.io WebSockets</h3>
+            <h3 class="lead title"><small class="volume">Volume Three</small>Interactive WebGL with Three.js and custom Angular.js Directives</h3>
 
-            <h4 class="lead">In this series you'll learn how to generate interactive 3D graphics in browser using WebGL and Three.js, with HTML5 Canvas fall-back on mobile devices. We will connect or renderings with Angular.js Directives to respond to user interaction and animate them using the requestAnimationFrame API.</h4>
+            <h4 class="lead subtitle">In this series you'll learn how to generate interactive 3D graphics in browser using WebGL and Three.js, with HTML5 Canvas fall-back on mobile devices. We will connect or renderings with Angular.js Directives to respond to user interaction and animate them using the requestAnimationFrame API.</h4>
 
             <ol>
 
-              <li><a href='#'>Chapter One : An introduction to WebGL. (Work in progress)</a></li>
-              <li><a href='#'>Chapter Two : An introduction to Three.js (Work in progress)</a></li>
-              <li><a href='#'>Chapter Three : Creating a Scene, Camera and Renderer in Three.js (Work in progress)</a></li>
-              <li><a href='#'>Chapter Four : Adding Geometries, Materials and Meshes to your scene. (Work in progress)</a></li>
-              <li><a href='#'>Chapter Five : Adding Lights to your scene. (Work in progress)</a></li>
-              <li><a href='#'>Chapter Six : Animating your Meshes, Lights and Scene with requestAnimationFrame. (Work in progress)</a></li>
-              <li><a href='#'>Chapter Seven : Making your renderings interactive with Angular.js Directives. (Work in progress)</a></li>
-              <li><a href='#'>Chapter Eight : Real-time networked interations with Socket.io WebSockets. (Work in progress)</a></li>
-              <li><a href='#'>Chapter Nine : Optimizing for performance. (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter One : An introduction to WebGL. (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Two : An introduction to Three.js (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Three : Creating a Scene, Camera and Renderer in Three.js (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Four : Adding Geometries, Materials and Meshes to your scene. (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Five : Adding Lights to your scene. (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Six : Animating your Meshes, Lights and Scene with requestAnimationFrame. (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Seven : Making your renderings interactive with Angular.js Directives. (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Eight : Real-time networked interations with Socket.io WebSockets. (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Nine : Optimizing for performance. (Work in progress)</a></li>
 
             </ol>
 
@@ -91,22 +133,22 @@
 
           <li>
 
-            <h3 class="lead">Volume Two : Real-Time E-Commerce with Angular.js, Socket.io and Node.js</h3>
+            <h3 class="lead title"><small class="volume">Volume Two</small>Real-Time E-Commerce with Angular.js, Socket.io and Node.js</h3>
 
-            <h4 class="lead">In this series you'll learn how to build an entire real-time e-commerce platform with a heroku hosted Node.js backed API, Socket.io WebSocket connections and a 100% Google Pagespeed Amazon S3 hosted Mobile Optimized Angular.js front-end.</h4>
+            <h4 class="lead subtitle">In this series you'll learn how to build an entire real-time e-commerce platform with a heroku hosted Node.js backed API, Socket.io WebSocket connections and a 100% Google Pagespeed Amazon S3 hosted Mobile Optimized Angular.js front-end.</h4>
 
             <ol>
 
-              <li><a href='#'>Chapter One : Node.js installation on your local development machine. (Work in progress)</a></li>
-              <li><a href='#'>Chapter Two : Express.js (Work in progress)</a></li>
-              <li><a href='#'>Chapter Three : Redis (Work in progress)</a></li>
-              <li><a href='#'>Chapter Four : Heroku (Work in progress)</a></li>
-              <li><a href='#'>Chapter Five : Getting Socket.io to work on mobile connections using HTTPS and WSS (Work in progress)</a></li>
-              <li><a href='#'>Chapter Six : Angular (Work in progress)</a></li>
-              <li><a href='#'>Chapter Seven : AWS (Work in progress)</a></li>
-              <li><a href='#'>Chapter Eight : Pagespeed (Work in progress)</a></li>
-              <li><a href='#'>Chapter Nine : Setting up a Node.js workspace with Github integration in Brackets.io (Work in progress)</a></li>
-              <li><a href='#'>Chapter Ten : SEO - Hijax with Angular.js and Node.js (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter One : Node.js installation on your local development machine. (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Two : Express.js (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Three : Redis (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Four : Heroku (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Five : Getting Socket.io to work on mobile connections using HTTPS and WSS (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Six : Angular (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Seven : AWS (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Eight : Pagespeed (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Nine : Setting up a Node.js workspace with Github integration in Brackets.io (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Ten : SEO - Hijax with Angular.js and Node.js (Work in progress)</a></li>
 
             </ol>
 
@@ -114,20 +156,20 @@
 
           <li>
 
-            <h3 class="lead">Volume One : E-commerce wih Backbone.js and Ruby on Rails</h3>
+            <h3 class="lead title"><small class="volume">Volume One</small>Optimized E-commerce wih Backbone.js and Ruby on Rails</h3>
 
-            <h4 class="lead">In this series I'll walk you trough how to build an entire e-commerce platform with a heroku hosted Ruby on Rails backed CMS and a 100% Google Pagespeed Amazon S3 hosted Mobile Optimized Backbone.js front-end.</h4>
+            <h4 class="lead subtitle">In this series I'll walk you trough how to build an entire e-commerce platform with a heroku hosted Ruby on Rails backed CMS and a 100% Google Pagespeed Amazon S3 hosted Mobile Optimized Backbone.js front-end.</h4>
 
             <ol>
 
-              <li><a href='#'>Chapter One : Rails (Work in progress)</a></li>
-              <li><a href='#'>Chapter Two : Heroku (Work in progress)</a></li>
-              <li><a href='#'>Chapter Three : AWS (Work in progress)</a></li>
-              <li><a href='#'>Chapter Four : Rake (Work in progress)</a></li>
-              <li><a href='#'>Chapter Five : Backbone (Work in progress)</a></li>
-              <li><a href='#'>Chapter Six : Pagespeed (Work in progress)</a></li>
-              <li><a href='#'>Chapter Seven : Setting up a Ruby on Rails workspace with Github and Amazon S3 file upload integration in Coda (Work in progress)</a></li>
-              <li><a href='#'>Chapter Eight : SEO - Hijax with Backbone.js and Ruby on Rails (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter One : Rails (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Two : Heroku (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Three : AWS (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Four : Rake (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Five : Backbone (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Six : Pagespeed (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Seven : Setting up a Ruby on Rails workspace with Github and Amazon S3 file upload integration in Coda (Work in progress)</a></li>
+              <li><a href='#' class="link">Chapter Eight : SEO - Hijax with Backbone.js and Ruby on Rails (Work in progress)</a></li>
 
             </ol>
 
@@ -135,15 +177,13 @@
 
         </ul>
 
-        <hr>
-
       </nav>
 
       <footer class="container">
 
-        <h3>About the Author</h3>
+        <h3 class="lead title">About the Author</h3>
 
-        <h4 class="lead">A full stack web developer with a love for beautiful design, responsive mobile first UX and performance optimization. 16 years of experience. Currently working in Angluar.js, Node.js, Socket.io and Redis. Fluent in Backbone.js, Ruby on Rails, PHP, MySQL, ActionScript, CSS and HTML. Living and working in sunny Venice Beach, California. Contact me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a></h2>
+        <h4 class="lead subtitle">A full stack web developer with a love for beautiful design, responsive mobile first UX and performance optimization. 16 years of experience. Currently working in Angluar.js, Node.js, Socket.io and Redis. Fluent in Backbone.js, Ruby on Rails, PHP, MySQL, ActionScript, CSS and HTML. Living and working in sunny Venice Beach, California. Contact me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a></h2>
 
       </footer>
 
