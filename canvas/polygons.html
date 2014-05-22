@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+  <head>
+  </head>
+
+  <body>
+
+    <canvas id="canvas" resize></canvas>
+
+    <script src="paper-full.min.js"></script>
+
+    <script src="poly2tri.min.js"></script>
+
+    <script>
+
+
+
+      // Need to make random points that do not intersect! e.g. divide the window into a grid, then randomize / add jitter
+
+      var contour = [
+
+        new poly2tri.Point( Math.ceil( Math.random() * 100 ) , Math.ceil( Math.random() * 100 ) ),
+        new poly2tri.Point( Math.ceil( Math.random() * 100 ) , Math.ceil( Math.random() *  300 ) ),
+        new poly2tri.Point( Math.ceil( Math.random() * 300 ) , Math.ceil( Math.random() *  300 ) ),
+        new poly2tri.Point( Math.ceil( Math.random() * 300 ) , Math.ceil( Math.random() *  100 ) )
+
+      ];
+
+      var swctx = new poly2tri.SweepContext(contour);
+
+      var triangles = swctx.triangulate().getTriangles();
+
+    </script>
+
+    <script type="text/paperscript" canvas="canvas">
+
+      triangles.forEach( function( triangle ) {
+
+        var path = new Path();
+        path.strokeColor = 'black';
+
+        triangle.getPoints().forEach( function( point ) {
+
+          console.log( point.x , point.y );
+
+          path.add( new Point( point.x , point.y ));
+
+        });
+
+        path.closed = true;
+
+      });
+  </script>
+
+  </body>
+
+</html>
