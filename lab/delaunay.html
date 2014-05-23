@@ -49,6 +49,8 @@
 
             var directions = new Array();
 
+            var solid = Math.ceil( Math.random() * 12 - 1 );
+
             var i, x, y;
 
             var offset = 0;
@@ -96,7 +98,7 @@
                 --i; ctx.lineTo( vertices[triangles[i]][0] , vertices[triangles[i]][1] );
                 --i; ctx.lineTo( vertices[triangles[i]][0] , vertices[triangles[i]][1] );
                 ctx.closePath();
-                ctx.stroke();
+                if( i === solid ) { ctx.fill() } else { ctx.stroke() }
 
               }
 
