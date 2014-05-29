@@ -1,0 +1,60 @@
+<html ng-app="app">
+  <head>
+    <title>My first Three.js Angular.js directive</title>
+    <style>
+
+      body { margin: 0 }
+
+      canvas { width: 100%; height: 100%; background: #f8f8f8 }
+
+    </style>
+  </head>
+  <body>
+    <div rvdm-canvas></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
+      <script>
+
+        var app = angular.module( 'app' , [] )
+
+        .directive( 'rvdmCanvas' , function() {
+
+          return {
+
+            replace: true,
+
+            template: '<canvas>',
+
+            link: function( scope , element ) {
+
+              var scene = new THREE.Scene();
+              var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+              var renderer = new THREE.WebGLRenderer({ canvas: element[0] , alpha : true , antialias : true });
+              renderer.setSize( window.innerWidth, window.innerHeight );
+
+              var geometry = new THREE.OctahedronGeometry( 1 , 0 );
+              var material = new THREE.MeshBasicMaterial( { color: 0x555555, wireframe: true } );
+              var octahedron = new THREE.Mesh( geometry, material );
+              scene.add( octahedron );
+
+              camera.position.z = 5;
+
+              function render() {
+                requestAnimationFrame(render);
+                octahedron.rotation.x += 0.01;
+                octahedron.rotation.y += 0.01;
+                renderer.render(scene, camera);
+              }
+
+              render();
+
+            }
+
+          };
+
+        });
+
+      </script>
+    </body>
+</html>
