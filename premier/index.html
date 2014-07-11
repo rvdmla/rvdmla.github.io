@@ -52,6 +52,18 @@
 
         box-shadow: 0px 0px 12px rgba( 0,0,0,0.25 );
 
+        -webkit-transition: -webkit-transform .3s ease-in-out;
+        -moz-transition: -moz-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+
+      }
+
+      section figure img:hover {
+
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        transform: scale(1.1);
+
       }
 
       header {
@@ -64,14 +76,97 @@
 
       }
 
+      header figure {
+
+        margin: 0;
+
+      }
+
       header figure img {
 
         height: 62.5%;
         top: 18.75%;
         position: absolute;
-        left: 12.5%;
+        left: 8.75%;
 
         box-shadow: 0px 0px 12px rgba( 0,0,0,0.33 );
+
+      }
+
+      header h1 {
+
+        font: 100 24px/2 'futura-pt';
+        position: absolute;
+
+        left: 50%;
+        margin-left: -16px;
+
+        top: 25%;
+
+      }
+
+      header h1:before {
+
+        content: '';
+        background: black;
+        height: 10px;
+        width: 50px;
+        position: relative;
+        top: -10px;
+        display: block;
+        left: 0;
+
+      }
+
+      header p {
+
+        font: 100 14px/2 'futura-pt';
+        text-align: left;
+        top: 50%;
+
+      }
+
+      header p:first-of-type {
+
+        position: absolute;
+        left: 50%;
+        margin-left: -16px;
+        font-weight: 400;
+
+
+      }
+
+      header p:last-of-type {
+
+        position: absolute;
+        left: 62.5%;
+
+      }
+
+      header:after {
+
+        content: '';
+        display: block;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        -webkit-transform: rotate( 45deg );
+        height: 24px;
+        width: 24px;
+        bottom: 40px;
+        left: 50%;
+        margin-left: -12px;
+        position: absolute;
+
+      }
+
+      #logo {
+
+        height: 54px;
+        position: fixed;
+        left: 50%;
+        margin-left: -27px;
+        top: 10px;
+        z-index: 2;
 
       }
 
@@ -79,7 +174,12 @@
 
   </head>
 
+  <script type="text/javascript" src="//use.typekit.net/pcn5qmn.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   <body>
+
+    <img id="logo" src="logo.png">
 
     <header>
 
@@ -89,7 +189,35 @@
 
       </figure>
 
+      <aside id="text">
 
+      <h1>Amalie Schmidt</h1>
+
+      <p>
+
+        Height 5'9.5"<br>
+        Bust 30"<br>
+        Waist 24<br>
+        Hips 34<br>
+        Women Shoe 4<br>
+        Hair Blonde<br>
+        Eyes Blue
+
+      </p>
+
+      <p>
+
+        Hauteur 177cm<br>
+        Poitrine 80<br>
+        Taille 61<br>
+        Hanches 86<br>
+        Chaussures 37<br>
+        Cheveux Blonds<br>
+        Yeux Bleus
+
+      </p>
+
+      </aside>
 
     </header>
 
@@ -139,13 +267,15 @@
 
     document.addEventListener( 'scroll' , function() {
 
-      document.getElementById( 'main' ).style.webkitTransform = 'translateY( -' + ( window.scrollY * 1.5 ) + 'px )';
+      document.getElementById( 'main' ).style.webkitTransform = 'translateY( -' + ( window.scrollY * 0.5 ) + 'px )';
 
-      document.getElementById( 'main' ).style.mozTransform = 'translateY( -' + ( window.scrollY * 1.5 ) + 'px )';
+      document.getElementById( 'main' ).style.mozTransform = 'translateY( -' + ( window.scrollY * 0.5 ) + 'px )';
 
-      document.getElementById( 'main' ).style.msTransform = 'translateY( -' + ( window.scrollY * 1.5 ) + 'px )';
+      document.getElementById( 'main' ).style.msTransform = 'translateY( -' + ( window.scrollY * 0.5 ) + 'px )';
 
-      document.getElementById( 'main' ).style.transform = 'translateY( -' + ( window.scrollY * 1.5 ) + 'px )';
+      document.getElementById( 'main' ).style.transform = 'translateY( -' + ( window.scrollY * 0.5 ) + 'px )';
+
+      document.getElementById( 'text' ).style.opacity = 1 - ( window.scrollY / window.innerHeight ) * 2;
 
     });
 
