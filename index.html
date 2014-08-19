@@ -1,162 +1,109 @@
 <!doctype html>
+
 <html>
 
   <head>
 
-    <title>R.V.d.M | Articles about Angular.js, Node.js, Socket.io, Redis, AWS and Google Page Speed</title>
+    <title>R.V.d.M</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <script src="//use.typekit.net/fxt8hub.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-    <script type="text/javascript" src="//use.typekit.net/fxt8hub.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/obsidian.min.css">
-    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui, initial-scale=1, maximum-scale=1">
 
     <style>
 
+      html {
+
+        padding: 6% 8% 12% 8%;
+        box-sizing: border-box;
+
+      }
+
       body {
 
-        background: #000000 url('hubble.png') no-repeat bottom center / contain;
-        padding-bottom: 18.75%;
+        font: 100 18px/1.67 'garamond-premier-pro-display';
+        letter-spacing: 0.025em;
+        margin: 0;
+
+        -webkit-transition: all 0.3s ease-in-out;
 
       }
 
-      canvas {
-        background: #000000;
-        position: fixed;
+      figure {
+
         width: 100%;
-        top: 0;
+        margin: 0;
+
+        -webkit-transition: all 0.3s ease-in-out;
+
       }
 
-      main {
-        font: 100 1em/1.5 'futura-pt';
-        margin: 33.33% 3.125% 0 3.125%;
-        padding-bottom: 12em;
-        background: #fff;
-        position: relative;
+      p {
+
+        /*border: 1px solid #000;*/
+        margin: 0;
+        width: 100%;
+        margin-top: 2em;
+
+        -webkit-transition: all 0.3s ease-in-out;
+
+      }
+
+      a {
+
         color: #000;
-        z-index: 1;
+        text-decoration: none;
+        font-style: italic;
+        letter-spacing: 0.075em;
+        border-bottom: 1px solid #eee;
+
       }
 
-      h1 img {
-        margin: 1em auto;
-        width: 25%;
+      strong {
+
+        font-weight: 600;
+        letter-spacing: 0.125em;
+
       }
 
-      ol {
-        list-style: upper-roman;
+      em {
+
+        font-style: normal;
+        font-variant: small-caps;
+        letter-spacing: 0.0625em;
+
       }
 
-      ul h3 {
-        text-transform: uppercase;
-      }
+      @media (min-width : 768px) {
 
-      .introduction {
-        font-size: 24px;
-        font-weight: 100;
-        line-height: 1.5;
-        letter-spacing: 0px;
-        -webkit-font-smoothing: antialiased;
-      }
+        html {
 
-      .title {
-        font-family: 'futura-pt';
-        font-weight: 100;
-        letter-spacing: 4px;
-        font-size: 21px;
-        -webkit-font-smoothing: antialiased;
-        line-height: 2;
-        margin-bottom: 0;
-        text-transform: uppercase;
-      }
+          height: 100%;
 
-      .volume {
-        display: block;
-      }
+        }
 
-      .subtitle {
-        font-family: 'futura-pt';
-        -webkit-font-smoothing: antialiased;
-        font-size: 21px;
-        line-height: 1.5;
-        margin-top: 0;
-        margin-bottom: 1.5em;
-      }
+        body {
 
-      .paragraph {
-        font-family: 'futura-pt';
-        -webkit-font-smoothing: antialiased;
-        font-size: 21px;
-        line-height: 1.5;
-      }
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
 
-      .link {
-        -webkit-font-smoothing: antialiased;
-        font-size: 18px;
-        line-height: 2;
-      }
+        }
 
-      li > ol {
-        margin-bottom: 4em;
-      }
+        figure {
 
-      pre {
-        position: relative;
-        overflow: visible;
-        background: #fff;
-        border: none;
-        padding: 0;
-        margin: 3em auto;
-      }
+          width: 62.5%;
+          height: 100%;
 
-      pre:before {
-        background: #282b2e;
-        margin-left: -46.875vw;
-        position: absolute;
-        width: 93.75vw;
-        height: 100%;
-        content: '';
-        z-index: 0;
-        left: 50%;
-      }
+        }
 
-      code {
-        position: relative;
-      }
+        p {
 
-      .lead.subtitle.symbol:after {
-        font-family: 'apple symbols';
-        content: '\2651';
-        display: block;
-        color: #003366;
-        text-align: center;
-        margin: 3em auto;
-        font-size: 16px;
-      }
+          width: 37.5%;
 
-      .article-section {
-        position: relative;
-      }
-
-      .article-section:before {
-        position: absolute;
-        content: '\00A7';
-        margin-left: -2em;
-        font-family: 'futura-pt';
-        -webkit-font-smoothing: antialiased;
-        font-size: 16px;
-        line-height: 27px;
-      }
-
-      .image {
-
-        width: 62.5%;
-        margin: 2em auto;
-        display: block;
-        box-shadow: 0px 0px 24px rgba(0,0,0,0.125);
+        }
 
       }
 
@@ -166,964 +113,43 @@
 
   <body>
 
-    <main>
+    <figure></figure>
 
-      <header class="container page-header">
+    <p>
 
-        <h1 class="text-center">
+      <strong>R.V.d.M</strong> is a web developer and designer currently living and working in Venice Beach, Califoria. Specialized in performance critical corporate web experiences and applications. Clients include <em>Smashbox</em>, <em>Undefeated</em>, <em>Premier Models</em>, <em>Civilianaire</em>, <em>Raquel Allegra</em>, <em>Jenni Kayne</em> &amp; more. Please direct all inquiries to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a>
 
-          <img src="logo.png" alt="R.V.d.M">
+    </p>
 
-        </h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+    <script>
 
-        <h2 class="lead title">
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera( 25 , 1 , 0.1 , 1000 );
 
-          Creating your first Angular.js &times; Three.js &times; WebGL 'Hello World' directive
+      var renderer = new THREE.CanvasRenderer({ alpha: true });
+      renderer.setSize( 200 , 200 );
+      document.getElementsByTagName( 'figure' )[ 0 ].appendChild( renderer.domElement );
 
-        </h2>
+      var geometry = new THREE.OctahedronGeometry( 1 , 0 );
+      var material = new THREE.MeshBasicMaterial({ color: 0x000000 , wireframe : true });
+      var octahedron = new THREE.Mesh( geometry , material );
+      scene.add( octahedron );
 
-        <date>June 18, 2014</date>
+      camera.position.z = 5;
 
-        <h3 class="lead subtitle symbol">
+      var render = function () {
+          requestAnimationFrame(render);
 
-          <br>
+          cube.rotation.x += 0.01;
+          cube.rotation.y += 0.01;
 
-          <i>This is an early preview version of my first article. I have published this draft version to get early community feedback and give readers an idea of upcoming content. Please feel free to contact me with questions and comments on twitter <a href="https://twitter.com/rvdmla">@rvdmla</a></i>
+          renderer.render(scene, camera);
+      };
 
-          <br><br>
+      render();
 
-          This article will walk you through how to create an Angular.js directive that uses the HTML5 Canvas element and Three.js to create a scene, a WebGL renderer and a camera. To this scene we will add a Octahedron geometry with a wireframe material and animate this Octahedron using a requestAnimationFrame loop. Your finished product should look like this.
-
-          <img class="image" src="figure-1.png">
-
-        </h3>
-
-        <article>
-
-          <section class="article-section">
-
-            <p class="paragraph">We'll start by setting up our basic HTML page and include Angular.js and Three.js at the bottom of the body tag. I used CDN hosted versions of these libraries in my example to make sure the correct versions of these libraries get loaded, but feel free to download the latest versions of these libraries to your machine, you can find three.js here http://threejs.org/ and Angular.js here https://angularjs.org/. We will write all of our code fir this example inside the script tags at the bottom of our page.</p>
-
-            <pre>
-
-            <code>
-
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      // Our Javascript will go here.
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">First off, let's log the Angular global object to the console to make sure Angular is running. If you are new to Angular.js I highly recommend you check out the codeschool introduction on Angular.</p>
-
-            <pre>
-
-            <code>
-
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-
-      console.log( angular );
-
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">You should see a response like this when you open up the console in your browser. ( View > Developer > JavaScript Console in Google Chrome ). This means Angular is working! Now let's do the same for Three.js just to make sure it's up and running as well.</p>
-
-            <pre>
-
-            <code>
-
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-
-      console.log( THREE );
-
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">If your response from the console looks like this you're good to go! If not, if either return a value of undefined for example, something might have gone wrong. Both Angular.js and Three.js have basic setup guides on their websites that walk you through this step. Or, feel free to reach out to me on Twitter at any time! @rvdmla</p>
-
-            <p class="paragraph">Next, let's add an element to our html document with the angular directive rvdm-canvas defined on it. This can be any element you'd like, but for this example I'll use a div tag.</p>
-
-            <pre>
-
-            <code>
-
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">Note the name we chose for our directive, rvdm-canvas. It's always good to namespace your custom directives, the convention is to use a 2 or 3 letter initials version of the autor's name. In my case I use four letters, rvdm, as I have an exceptionally long name. Brian T. Ford TWITTER GITHUB who works on Angular.js at Google and is the author of many angular repositiories including the Angular.js and Socket.io service uses the prefix btford. Angular.js itself uses the ng prefix, you'll see this prefix more often in directives like ng-repeat and ng-show. You can read more about directives and their naming conventions here https://docs.angularjs.org/guide/directive</p>
-
-            <p class="paragraph">Now it's time to create our first custom Angular.js directive. First we need to set up our Application. We'll define our app variable and make it an Angular app module.</p>
-
-            <pre>
-
-            <code>
-
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-
-      var app = angular.module( 'app' , [] );
-
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">To get our app initialized we need to define an ng-app directive and pass in our app variable we just created. I like doing this on my html element so I can use Angular anywhere in my site, you can specify the directive anywhere, just note that only the element you specify the directive on plus all of it's children will be able to use any Angular.js magic.</p>
-
-            <pre>
-
-            <code>
-
-&lt;html ng-app="app"&gt;
-
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] );
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph"> This process is called bootstrapping. You can read more about various ways of bootstrapping your Angular app here. https://docs.angularjs.org/guide/bootstrap</p>
-
-            <p class="paragraph">Now we can go ahead and create our directive. I like chaining my angular modules for smaller applications. Pay close attention to the position of the semicolon moving.</p>
-
-            <pre>
-
-            <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-
-      var app = angular.module( 'app' , [] )
-
-      .directive( 'rvdmCanvas' , function() {
-
-        return {};
-
-      });
-
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">Have a look at the name of our directive, this is important. On your elements you define your directives in dash case, for example ng-app. In your Angular javascript you need to use camelcame, e.g. ngApp.</p>
-
-            <p class="paragraph">A directive takes it's name as it's first argument and an anonymous function as it's second argument. The anomymous function needs to return an object. In that object we can set parameters. We'll start by restricting our directive to only work as an attribute directive (by specifying the rvdm-canvas attribute on an exisiting html tag). To read more about the different types of directives you can again refer https://docs.angularjs.org/guide/directive</p>
-
-            <p class="paragraph">We'll also set our template for this directive to be an empty canvas tag and we'll set the replace parameter to true. This means our directive will take any elements it's defined on, in our example html document this is a div, and replace it with a canvas element.</p>
-
-            <pre>
-
-            <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-
-        return {
-
-          replace : true,
-
-          template : '&lt;canvas&gt;'
-
-        };
-
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">If all went well, you'll still see an empty white page but in your DOM inspector you'll see we no longer have a div, but instead a canvas element.</p>
-
-            <p class="paragraph">I like being immersed in impressive 3D creations, so I like setting my canvas to be full screen. Let's also add a soft background color so you see exactly where our canvas element is.</p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-
-    &lt;style&gt;
-
-      body {
-
-        margin: 0
-
-      }
-
-      canvas {
-
-        background: #f8f8f8;
-        height: 100%;
-        width: 100%;
-
-      }
-
-    &lt;/style&gt;
-
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-        return {
-          replace : true,
-          template : '&lt;canvas&gt;'
-        };
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">You should see something like this:</p>
-
-            <p class="paragraph">Now let's set a link function, this function will get executed every time a new instance of your directive is created. We'll have our function log out the Angular global and the THREE global so you see everything still works.</p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-    &lt;style&gt;body { margin: 0 } canvas { background: #f8f8f8; height: 100%; width: 100%; }&lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-
-        return {
-          replace : true,
-          template : '&lt;canvas&gt;',
-
-          link: function( scope , element ) {
-
-            console.log( angular );
-
-            console.log( THREE );
-
-          }
-
-        };
-
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">Now let's get started with WebGL! I'll mostly follow along the threejs.org getting started guide so that those of you already familiar with Three.js will see exactly what stays the same and what changes by adding Angular.js in the mix.</p>
-
-            <p class="paragraph">We'll create a scene, a camera and a WebGL renderer. We'll set the renderer's size to take up the full window size and then we append it to.</p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-    &lt;style&gt;body { margin: 0 } canvas { background: #f8f8f8; height: 100%; width: 100%; }&lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-        return {
-          replace : true,
-          template : '&lt;canvas&gt;',
-
-          link: function( scope , element ) {
-            console.log( angular );
-            console.log( THREE );
-
-            var scene = new THREE.Scene();
-
-            var camera = new THREE.PerspectiveCamera( 75 , window.innerWidth / window.innerHeight , 0.1 , 1000 );
-
-            var renderer = new THREE.WebGLRenderer({ canvas : element[0] });
-
-            renderer.setSize( window.innerWidth , window.innerHeight );
-
-          }
-
-        };
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">Now that we have a working Angular directive let's set up our Canvas element. We'll take whichever element our directive attribute is applied to and replace it with an html canvas emelemtn that we'll use to render our octahedron onto. I like setting my canvas to be full screen for these examples so I've added in an extra bit of css styling to do that, however feel free to style your emelent to any dimension you like.</p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-    &lt;style&gt;body { margin: 0 } canvas { background: #f8f8f8; height: 100%; width: 100%; }&lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-        return {
-          replace: true,
-          template: '&lt;canvas&gt;',
-
-          link: function( scope , element ) {
-            console.log( angular );
-            console.log( THREE );
-            var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera( 75 , window.innerWidth / window.innerHeight , 0.1 , 1000 );
-
-            var renderer = new THREE.WebGLRenderer({ canvas: element[0] , alpha: true });
-
-            renderer.setSize( window.innerWidth, window.innerHeight );
-          }
-
-        };
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">Now that we'll use three.js to create a scene, a camera and a renderer. These are basic tools any Three.js environment needs to show any content. However none of these elements will show up on your canvas, it will still appear empty at this point.</p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-    &lt;style&gt;body { margin: 0 } canvas { background: #f8f8f8; height: 100%; width: 100%; }&lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-        return {
-          replace : true,
-          template : '&lt;canvas&gt;',
-
-          link: function( scope , element ) {
-            console.log( angular );
-            console.log( THREE );
-            var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera( 75 , window.innerWidth / window.innerHeight , 0.1 , 1000 );
-            var renderer = new THREE.WebGLRenderer({ canvas : element[0] , alpha : true });
-            renderer.setSize( window.innerWidth , window.innerHeight );
-
-            var geometry = new THREE.OctahedronGeometry( 1 , 0 );
-
-            var material = new THREE.MeshBasicMaterial({ color : 0x555555 });
-
-            var octahedron = new THREE.Mesh( geometry , material );
-
-            scene.add( octahedron );
-
-            camera.position.z = 5;
-
-          }
-
-        };
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">
-
-            Now it's time to add our octahedron. Three.js uses an OctahedronGeometry, let's create one and add it to our scene. Note that I have set the wireframe option to true. This will render our octahedron as a wireframe. We'll talk about colors, materials and lights in a future post.
-
-          </p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-    &lt;style&gt;body { margin: 0 } canvas { background: #f8f8f8; height: 100%; width: 100%; }&lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-        return {
-          replace : true,
-          template : '&lt;canvas&gt;',
-
-          link: function( scope , element ) {
-            console.log( angular );
-            console.log( THREE );
-            var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera( 75 , window.innerWidth / window.innerHeight , 0.1 , 1000 );
-            var renderer = new THREE.WebGLRenderer({ canvas : element[0] , alpha : true });
-            renderer.setSize( window.innerWidth , window.innerHeight );
-            var geometry = new THREE.OctahedronGeometry( 1 , 0 );
-            var material = new THREE.MeshBasicMaterial({ color : 0x555555 });
-            var octahedron = new THREE.Mesh( geometry , material );
-            scene.add( octahedron );
-            camera.position.z = 5;
-
-            function render() {
-
-              requestAnimationFrame( render );
-
-              renderer.render( scene , camera );
-
-            }
-
-            render();
-
-          }
-
-        };
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">Now it's time to add our octahedron. Three.js uses a OctahedronGeometry, let's create one and add it to our scene. Note that I have set the wireframe option to true. This will render our octahedron as a wireframe. We'll talk about colors, materials and lights in a future post.</p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-    &lt;style&gt;body { margin: 0 } canvas { background: #f8f8f8; height: 100%; width: 100%; }&lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-        return {
-          replace : true,
-          template : '&lt;canvas&gt;',
-
-          link: function( scope , element ) {
-            console.log( angular );
-            console.log( THREE );
-            var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera( 75 , window.innerWidth / window.innerHeight , 0.1 , 1000 );
-            var renderer = new THREE.WebGLRenderer({ canvas : element[0] , alpha : true });
-            renderer.setSize( window.innerWidth , window.innerHeight );
-            var geometry = new THREE.OctahedronGeometry( 1 , 0 );
-
-            var material = new THREE.MeshBasicMaterial({ color : 0x555555 , wireframe : true });
-
-            var octahedron = new THREE.Mesh( geometry , material );
-            scene.add( octahedron );
-            camera.position.z = 5;
-            function render() {
-              requestAnimationFrame( render );
-              renderer.render( scene , camera );
-            }
-            render();
-
-          }
-
-        };
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">We now have a wireframe of a 3D octahedron on our scene! Good job. While this is a great hello world so far, let's make sure we can prove our octahedron is actually 3D and not just a 2D line drawing by animating it and having it spin around. We'll use the request Animation Frame API for this to provide smooth framerates. We'll talk about rAF and performance more in upcoming posts.</p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-  &lt;head&gt;
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-    &lt;style&gt;body { margin: 0 } canvas { background: #f8f8f8; height: 100%; width: 100%; }&lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-      console.log( angular );
-      console.log( THREE );
-      var app = angular.module( 'app' , [] )
-      .directive( 'rvdmCanvas' , function() {
-        return {
-          replace : true,
-          template : '&lt;canvas&gt;',
-          link: function( scope , element ) {
-            console.log( angular );
-            console.log( THREE );
-            var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera( 75 , window.innerWidth / window.innerHeight , 0.1 , 1000 );
-            var renderer = new THREE.WebGLRenderer({ canvas : element[0] , alpha : true });
-            renderer.setSize( window.innerWidth , window.innerHeight );
-            var geometry = new THREE.OctahedronGeometry( 1 , 0 );
-            var material = new THREE.MeshBasicMaterial({ color : 0x555555 , wireframe : true });
-            var octahedron = new THREE.Mesh( geometry , material );
-            scene.add( octahedron );
-            camera.position.z = 5;
-
-            function render() {
-              requestAnimationFrame( render );
-
-              octahedron.rotation.x += 0.01;
-
-              octahedron.rotation.y += 0.01;
-
-              renderer.render( scene , camera );
-            }
-
-            render();
-          }
-        };
-      });
-    &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-          <section class="article-section">
-
-            <p class="paragraph">Congratulations! You've reached the end of this lesson and now know how to create an Angular.js directive that renders a 3D octahedron onto itself. We'll cover more useful functionality, like having your 3D renderings respond to user input in future lessons, for now, it's good to point out you can create as many elements you'd like and specify the octahedron atribute on them, they'll all get octahedrons rendered to them without having to write any more Three.js code! This is the power of Angular.js directives.</p>
-
-            <pre>
-
-              <code>
-
-&lt;html ng-app="app"&gt;
-
-  &lt;head&gt;
-
-    &lt;title&gt;My first Three.js Angular.js directive&lt;/title&gt;
-
-    &lt;style&gt;
-
-      body {
-        margin: 0
-      }
-
-      canvas {
-        background: #f8f8f8;
-        height: 100%;
-        width: 100%;
-      }
-
-    &lt;/style&gt;
-
-  &lt;/head&gt;
-
-  &lt;body&gt;
-
-    &lt;div rvdm-canvas&gt;&lt;/div&gt;
-
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js&quot;&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-
-      console.log( angular );
-      console.log( THREE );
-
-      var app = angular.module( 'app' , [] )
-
-      .directive( 'rvdmCanvas' , function() {
-
-        return {
-
-          replace : true,
-          template : '&lt;canvas&gt;',
-          link: function( scope , element ) {
-
-            console.log( angular );
-            console.log( THREE );
-
-            var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera( 75 , window.innerWidth / window.innerHeight , 0.1 , 1000 );
-            var renderer = new THREE.WebGLRenderer({ canvas : element[0] , alpha : true });
-            renderer.setSize( window.innerWidth , window.innerHeight );
-
-            var geometry = new THREE.OctahedronGeometry( 1 , 0 );
-            var material = new THREE.MeshBasicMaterial({ color : 0x555555 , wireframe : true });
-            var octahedron = new THREE.Mesh( geometry , material );
-            scene.add( octahedron );
-
-            camera.position.z = 5;
-
-            function render() {
-
-              requestAnimationFrame( render );
-
-              octahedron.rotation.x += 0.01;
-              octahedron.rotation.y += 0.01;
-
-              renderer.render( scene , camera );
-
-            }
-
-            render();
-
-          }
-
-        };
-
-      });
-
-    &lt;/script&gt;
-
-  &lt;/body&gt;
-
-&lt;/html&gt;
-
-            </code>
-
-          </pre>
-
-          </section>
-
-        </article>
-
-      </header>
-
-      <nav class="container">
-
-        <ul class="list-inline">
-
-          <li>
-
-            <h3 class="lead title"><small class="volume">Volume Three</small>Interactive WebGL with Three.js and custom Angular.js Directives</h3>
-
-            <h4 class="lead subtitle">In this series you'll learn how to generate interactive 3D graphics in browser using WebGL and Three.js, technology currently available in desktop browsers and soon in the upcoming releast of iOS8. We will connect or renderings with Angular.js Directives to respond to user interaction and animate them using the requestAnimationFrame API.</h4>
-
-            <ol>
-
-              <li><a href='#' class="link">Chapter One : Creating your first Angular.js &times; Three.js &times; WebGL 'Hello World' Directive ( Early preview )</a></li>
-              <li><a class="link">Chapter Two : An introduction to WebGL. (Work in progress)</a></li>
-              <li><a class="link">Chapter Three : An introduction to Three.js (Work in progress)</a></li>
-              <li><a class="link">Chapter Four : Creating a Scene, Camera and Renderer in Three.js (Work in progress)</a></li>
-              <li><a class="link">Chapter Five : Adding Geometries, Materials and Meshes to your scene. (Work in progress)</a></li>
-              <li><a class="link">Chapter Six : Adding Lights to your scene. (Work in progress)</a></li>
-              <li><a class="link">Chapter Seven : Animating your Meshes, Lights and Scene with requestAnimationFrame. (Work in progress)</a></li>
-              <li><a class="link">Chapter Eight : Making your renderings interactive with Angular.js Directives. (Work in progress)</a></li>
-              <li><a class="link">Chapter Nine : Real-time networked interations with Socket.io WebSockets. (Work in progress)</a></li>
-              <li><a class="link">Chapter Ten : Optimizing for performance. (Work in progress)</a></li>
-
-            </ol>
-
-          </li>
-
-          <li>
-
-            <h3 class="lead title"><small class="volume">Volume Two</small>Real-Time E-Commerce with Angular.js, Socket.io and Node.js</h3>
-
-            <h4 class="lead subtitle">In this series you'll learn how to build an entire real-time e-commerce platform with a heroku hosted Node.js backed API, Socket.io WebSocket connections and a 100% Google Pagespeed Amazon S3 hosted Mobile Optimized Angular.js front-end.</h4>
-
-            <ol>
-
-              <li><a class="link">Chapter One : Node.js installation on your local development machine. (Work in progress)</a></li>
-              <li><a class="link">Chapter Two : Express.js (Work in progress)</a></li>
-              <li><a class="link">Chapter Three : Redis (Work in progress)</a></li>
-              <li><a class="link">Chapter Four : Heroku (Work in progress)</a></li>
-              <li><a class="link">Chapter Five : Getting Socket.io to work on mobile connections using HTTPS and WSS (Work in progress)</a></li>
-              <li><a class="link">Chapter Six : Angular (Work in progress)</a></li>
-              <li><a class="link">Chapter Seven : AWS (Work in progress)</a></li>
-              <li><a class="link">Chapter Eight : Pagespeed (Work in progress)</a></li>
-              <li><a class="link">Chapter Nine : Setting up a Node.js workspace with Github integration in Brackets.io (Work in progress)</a></li>
-              <li><a class="link">Chapter Ten : SEO - Hijax with Angular.js and Node.js (Work in progress)</a></li>
-
-            </ol>
-
-          </li>
-
-          <li>
-
-            <h3 class="lead title"><small class="volume">Volume One</small>Optimized E-commerce wih Backbone.js and Ruby on Rails</h3>
-
-            <h4 class="lead subtitle">In this series I'll walk you trough how to build an entire e-commerce platform with a heroku hosted Ruby on Rails backed CMS and a 100% Google Pagespeed Amazon S3 hosted Mobile Optimized Backbone.js front-end.</h4>
-
-            <ol>
-
-              <li><a class="link">Chapter One : Rails (Work in progress)</a></li>
-              <li><a class="link">Chapter Two : Heroku (Work in progress)</a></li>
-              <li><a class="link">Chapter Three : AWS (Work in progress)</a></li>
-              <li><a class="link">Chapter Four : Rake (Work in progress)</a></li>
-              <li><a class="link">Chapter Five : Backbone (Work in progress)</a></li>
-              <li><a class="link">Chapter Six : Pagespeed (Work in progress)</a></li>
-              <li><a class="link">Chapter Seven : Setting up a Ruby on Rails workspace with Github and Amazon S3 file upload integration in Coda (Work in progress)</a></li>
-              <li><a class="link">Chapter Eight : SEO - Hijax with Backbone.js and Ruby on Rails (Work in progress)</a></li>
-
-            </ol>
-
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <footer class="container">
-
-        <h3 class="lead title">About this Site</h3>
-
-        <h4 class="lead subtitle">These articles are a collection of reflections on 16 years of being a web developer, creating new ideas and techniques in luxury e-commerce and m-commerce, with love for design, UX and performance. The index above is a rough outline of subjects that will be written about, going from local development configurations all the way to performant, responsive, search engine optimized production applications. If you have any questions feel free to contact me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a></h4>
-
-        <h3 class="lead title">About the Author</h3>
-
-        <h4 class="lead subtitle">A full stack web developer with a love for beautiful design, responsive mobile first UX and performance optimization. 16 years of experience. Currently working in Angluar.js, Node.js, Socket.io and Redis. Fluent in Backbone.js, Ruby on Rails, PHP, MySQL, ActionScript, CSS and HTML. Living and working in sunny Venice Beach, California. Contact me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a></h2>
-
-      </footer>
-
-    </main>
-
-    <script src='jquery-2.1.1.min.js'></script>
-
-    <script src='three.min.js'></script>
-
-    <script src='four.js'></script>
-
-    <script>hljs.initHighlightingOnLoad();</script>
+    </script>
 
     <script>
 
