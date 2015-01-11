@@ -1,0 +1,146 @@
+<!doctype html>
+
+<html>
+
+  <head>
+
+    <title>
+
+      D3 — 1
+
+    </title>
+
+    <meta name="viewport" content="width = device-width , initial-scale = 1">
+
+    <style>
+
+      html {
+
+        height: 100%;
+
+      }
+
+      body {
+
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100%;
+
+      }
+
+    </style>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <main></main>
+
+    <script>
+
+
+
+      var chart = {
+
+        dataset : [],
+
+        height : 300,
+
+        width : 400
+
+      };
+
+      for( var i = 0 ; i < 150 ; i++ ) {
+
+        chart.dataset.push( Math.random() * 100 );
+
+      }
+
+      chart.scale = {
+
+        y : d3
+
+          .scale
+
+          .linear()
+
+          .domain([ 0 , d3.max( chart.dataset ) * 1.1 ])
+
+          .range([ 0 , chart.height ]),
+
+        x : d3
+
+          .scale
+
+          .ordinal()
+
+          .domain( chart.dataset )
+
+          .rangeBands([ 0 , chart.width ] , .1 , 0 ),
+
+        color : d3
+
+          .scale
+
+          .quantile()
+
+          .domain([ 0 , 10 , chart.dataset.length - 10 , chart.dataset.length ])
+
+          .range([ 'darkcyan' , 'powderblue' , 'mistyrose' ])
+
+      };
+
+
+
+      chart.svg = d3
+
+        .select( 'main' )
+
+        .append( 'svg' )
+
+        .attr( 'width' , chart.width )
+
+        .attr( 'height' , chart.height );
+
+
+
+      chart.svg
+
+        .selectAll( 'rect' )
+
+        .data( chart.dataset )
+
+        .enter()
+
+        .append( 'rect' )
+
+        .attr( 'class' , 'bar' )
+
+        .attr( 'x' , chart.scale.x )
+
+        .attr( 'y' , function( data ) {
+
+          return chart.height - chart.scale.y( data );
+
+        })
+
+        .attr( 'width' , chart.scale.x.rangeBand() )
+
+        .attr( 'height' , chart.scale.y )
+
+        .attr( 'fill' , function( data , index ) {
+
+          return chart.scale.color( index );
+
+        });
+
+
+
+    </script>
+
+  </body>
+
+</html>
