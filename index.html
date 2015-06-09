@@ -4,10 +4,26 @@
 
   <head>
 
-    <title>R.V.d.M</title>
+    <title>
+
+      R.V.d.M
+
+    </title>
 
     <script src="//use.typekit.net/fxt8hub.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+
+    <script>
+
+      try {
+
+        Typekit.load();
+
+      } catch( e ) {
+
+
+      }
+
+    </script>
 
     <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui, initial-scale=1, maximum-scale=1">
 
@@ -15,67 +31,85 @@
 
       html {
 
-        padding: 6% 8% 12% 8%;
         box-sizing: border-box;
+
+        padding: 6% 8% 12% 8%;
 
       }
 
       body {
 
         font: 100 18px/1.67 'garamond-premier-pro-display';
-        letter-spacing: 0.025em;
-        margin: 0;
 
         -webkit-transition: all 0.3s ease-in-out;
+
+        transition: all 0.3s ease-in-out;
+
+        letter-spacing: 0.025em;
+
+        margin: 0;
 
       }
 
       figure {
 
-        width: 100%;
-        margin: 0;
-
         -webkit-transition: all 0.3s ease-in-out;
+
+        transition: all 0.3s ease-in-out;
+
+        width: 100%;
+
+        margin: 0;
 
       }
 
       p {
 
-        /*border: 1px solid #000;*/
-        margin: 0;
-        width: 100%;
+        -webkit-transition: all 0.3s ease-in-out;
+
+        transition: all 0.3s ease-in-out;
+
         margin-top: 2em;
 
-        -webkit-transition: all 0.3s ease-in-out;
+        width: 100%;
+
+        margin: 0;
 
       }
 
       a {
 
-        color: #000;
-        text-decoration: none;
-        font-style: italic;
-        letter-spacing: 0.075em;
         border-bottom: 1px solid #eee;
+
+        letter-spacing: 0.075em;
+
+        text-decoration: none;
+
+        font-style: italic;
+
+        color: #000;
 
       }
 
       strong {
 
-        font-weight: 600;
         letter-spacing: 0.125em;
+
+        font-weight: 600;
 
       }
 
       em {
 
-        font-style: normal;
-        font-variant: small-caps;
         letter-spacing: 0.0625em;
+
+        font-variant: small-caps;
+
+        font-style: normal;
 
       }
 
-      @media (min-width : 768px) {
+      @media ( min-width : 768px ) {
 
         html {
 
@@ -85,16 +119,26 @@
 
         body {
 
-          height: 100%;
-          display: flex;
-          flex-direction: row;
+          -webkit-align-items: flex-end;
+
+          -webkit-flex-direction: row;
+
+          -webkit-display: flex;
+
           align-items: flex-end;
+
+          flex-direction: row;
+
+          display: flex;
+
+          height: 100%;
 
         }
 
         figure {
 
           width: 62.5%;
+
           height: 100%;
 
         }
@@ -117,22 +161,23 @@
 
     <p>
 
-      I am a full stack JavaScript and iOS developer and UX designer currently living and working in Venice Beach, Califoria. Specialized in user friendly, performance optimized and secure web applications. Some call me a <a href="http://www.forbes.com/sites/quora/2013/06/27/the-myth-of-the-myth-of-the-unicorn-designer/">unicorn</a>. My clients range from Fortune 500 companies to disruptive startups. Contact me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a>
+      I am an Artificial Intelligence, Software and Front-End Engineer. Living and working between Venice Beach, California and New York. Specialized in creating user friendly, performance optimized and secure Web and iOS Applications, engaging Data Visualisations and Big Data. Some call me a <a href="http://www.forbes.com/sites/quora/2013/06/27/the-myth-of-the-myth-of-the-unicorn-designer/">unicorn</a>. My clients range from Fortune 500 companies to disruptive startups. Contact me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;">&#114;&#64;&#114;&#118;&#100;&#109;&#46;&#108;&#97;</a>
 
     </p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
+
     <script>
 
       var scene = new THREE.Scene();
       var camera = new THREE.PerspectiveCamera( 25 , 1 , 0.1 , 1000 );
 
-      var renderer = new THREE.CanvasRenderer({ alpha: true });
+      var renderer = new THREE.CanvasRenderer( { alpha: true } );
       renderer.setSize( 200 , 200 );
       document.getElementsByTagName( 'figure' )[ 0 ].appendChild( renderer.domElement );
 
       var geometry = new THREE.OctahedronGeometry( 1 , 0 );
-      var material = new THREE.MeshBasicMaterial({ color: 0x000000 , wireframe : true });
+      var material = new THREE.MeshBasicMaterial( { color: 0x000000 , wireframe : true } );
       var octahedron = new THREE.Mesh( geometry , material );
       scene.add( octahedron );
 
